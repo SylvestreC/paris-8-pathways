@@ -2,9 +2,12 @@
 
 ### Université Paris 8 – Dashboard de visualisation de données
 
+Par Sylvestre CHANSAVATH et Noé ZEGHOUD.
+
 ## Présentation générale
 
-Ce projet propose une **interface web interactive de visualisation et d'exploration de données**, dédiée à l'analyse des **parcours de formation et d'insertion professionnelle des étudiants de l'Université Paris 8**. L'interface est accessible à partir de cet URL : https://parcours-paris8-viz.lovable.app/.
+Ce projet propose une **interface web interactive de visualisation et d'exploration de données**, dédiée à l'analyse des **parcours de formation et d'insertion professionnelle des étudiants de l'Université Paris 8**.
+L'interface est accessible à partir de cet URL : https://parcours-paris8-viz.lovable.app/.
 
 L'objectif est de rendre visibles, comparables et interprétables les relations entre :
 
