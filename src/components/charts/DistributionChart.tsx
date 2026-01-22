@@ -220,6 +220,20 @@ export const DistributionChart = ({
           style={{ opacity: 0 }}
         />
       </div>
+
+      <div className="mt-4 text-xs">
+        <p className="font-medium text-muted-foreground mb-2">
+          {viewMode === 'domaine' ? 'Domaines de formation' : 'Secteurs professionnels'}
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {Object.entries(viewMode === 'domaine' ? DOMAIN_COLORS : SECTOR_COLORS).map(([name, color]) => (
+            <div key={name} className="flex items-center gap-1.5">
+              <div className="h-3 w-3 rounded-sm" style={{ backgroundColor: color }} />
+              <span className="text-muted-foreground">{name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

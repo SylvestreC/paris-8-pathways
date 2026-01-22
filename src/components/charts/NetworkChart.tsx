@@ -230,16 +230,32 @@ export const NetworkChart = ({ data, filters, onToggleFilter }: NetworkChartProp
         />
       </div>
 
-      <div className="mt-4 flex items-center justify-center gap-8 text-xs text-muted-foreground">
-        <div className="flex items-center gap-2">
-          <div className="h-4 w-4 rounded-full bg-primary" />
-          <span>Domaine de formation</span>
+      <div className="mt-4 grid grid-cols-2 gap-4 text-xs">
+        <div>
+          <p className="font-medium text-muted-foreground mb-2">Domaines de formation</p>
+          <div className="flex flex-wrap gap-2">
+            {Object.entries(DOMAIN_COLORS).map(([name, color]) => (
+              <div key={name} className="flex items-center gap-1.5">
+                <div className="h-3 w-3 rounded-full" style={{ backgroundColor: color }} />
+                <span className="text-muted-foreground">{name}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="h-4 w-4 rounded-full bg-accent" />
-          <span>Secteur professionnel</span>
+        <div>
+          <p className="font-medium text-muted-foreground mb-2">Secteurs professionnels</p>
+          <div className="flex flex-wrap gap-2">
+            {Object.entries(SECTOR_COLORS).map(([name, color]) => (
+              <div key={name} className="flex items-center gap-1.5">
+                <div className="h-3 w-3 rounded-full" style={{ backgroundColor: color }} />
+                <span className="text-muted-foreground">{name}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        <span className="text-muted-foreground/60">• Taille = nombre d'étudiants</span>
+        <div className="col-span-2 text-center text-muted-foreground/60 mt-2">
+          Taille des nœuds = nombre d'étudiants
+        </div>
       </div>
     </div>
   );

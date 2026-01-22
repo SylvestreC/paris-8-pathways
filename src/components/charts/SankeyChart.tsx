@@ -217,14 +217,28 @@ export const SankeyChart = ({ data, filters, onToggleFilter }: SankeyChartProps)
         />
       </div>
 
-      <div className="mt-4 flex items-center justify-center gap-8 text-xs text-muted-foreground">
-        <div className="flex items-center gap-2">
-          <div className="h-3 w-8 rounded bg-primary opacity-60" />
-          <span>Formation (domaine)</span>
+      <div className="mt-4 grid grid-cols-2 gap-4 text-xs">
+        <div>
+          <p className="font-medium text-muted-foreground mb-2">Domaines de formation</p>
+          <div className="flex flex-wrap gap-2">
+            {Object.entries(DOMAIN_COLORS).map(([name, color]) => (
+              <div key={name} className="flex items-center gap-1.5">
+                <div className="h-3 w-3 rounded-sm" style={{ backgroundColor: color }} />
+                <span className="text-muted-foreground">{name}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="h-3 w-8 rounded bg-accent opacity-60" />
-          <span>Emploi (secteur)</span>
+        <div>
+          <p className="font-medium text-muted-foreground mb-2">Secteurs professionnels</p>
+          <div className="flex flex-wrap gap-2">
+            {Object.entries(SECTOR_COLORS).map(([name, color]) => (
+              <div key={name} className="flex items-center gap-1.5">
+                <div className="h-3 w-3 rounded-sm" style={{ backgroundColor: color }} />
+                <span className="text-muted-foreground">{name}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
