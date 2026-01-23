@@ -45,9 +45,9 @@ Le projet s'inscrit dans une démarche :
 
 ### Principe de fonctionnement
 
-- Les données sont **collectées via un Google Form**, accessible uniquement à des utilisateurs authentifiés (comptes Google autorisés).
+- Les données sont **collectées via un Google Form**, accessible uniquement à des utilisateurs authentifiés (comptes Google autorisés). Ce Google Form est accessible via cet URL (pour l'instant accessible à tous) : https://docs.google.com/forms/d/e/1FAIpQLSfsi8CbRZvy4dLMLmEGMpXBD1vdef4LtOqeiNLU6YaAX5TcfQ/viewform?usp=dialog.
 
-- Les réponses alimentent automatiquement une **Google Sheet**, qui constitue la **source unique de données**.
+- Les réponses alimentent automatiquement une **Google Sheet**, qui constitue la **source unique de données**. Ce Google Sheet est accessible via cet URL : https://docs.google.com/spreadsheets/d/1NKDlWORzPqvVgbfqkIRiVrWcbkvVWZEfXHVd8mV5JDA/edit?usp=sharing.
 
 - La Google Sheet est publiée en **CSV public** (lecture seule).
 
